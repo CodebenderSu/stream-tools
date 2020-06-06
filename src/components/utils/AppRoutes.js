@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import HomePage from '../../dir/HomePage';
 import CountdownPage from '../../dir/CountdownPage';
@@ -11,7 +11,6 @@ class AppRoutes extends Component {
       <Switch>
         <Route path={routes.home} exact component={HomePage} />
         <Route path={routes.countdown} exact component={CountdownPage} />
-        <Redirect from='*' exact to={routes.home} component={HomePage} />
       </Switch>
     );
   };
