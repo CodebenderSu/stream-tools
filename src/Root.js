@@ -6,7 +6,7 @@ import { routes } from './config.js';
 class Root extends Component {
   render () {
     return (
-      <Router basename={routes.home}>
+      <Router basename={routes.base}>
         {this.props.children}
       </Router>
     );
