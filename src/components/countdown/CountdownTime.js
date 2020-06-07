@@ -27,15 +27,23 @@ class CountdownTime extends Component {
   componentDidMount() {
     if (!this.options.s && !this.options.timestamp) { this.setState({ complete: true })};
   };
-  renderer = ({days, hours, minutes, seconds, milliseconds, complete}) => {
+  renderer = ({days, hours, minutes, seconds, milliseconds, completed}) => {
     const { options } = this;
-    if (complete) {
+    if (completed) {
       this.setState({ complete: true });
+      return (
+        <div className='countdown-content'>
+          <div className='countdown-timer'>
+            <span className='timer-text'>{this.options.complete}</span>
+          </div>
+        </div>
+      );
     } else {
       return (
-        <p>
-          <span>{options.prefix}&nbsp;</span>
+        <div className='countdown-timer'>
+          <p className='timer-text'>{options.prefix}&nbsp;</p>
 
+          <p className='timer-count'>
           <span title='Days'>
             {options.days
               ? `${days < 10
@@ -67,20 +75,27 @@ class CountdownTime extends Component {
                 : milliseconds}`
               : ''}
           </span>
+          </p>
 
-          <span>&nbsp;{options.suffix}</span>
-        </p>
+          <p className='timer-text'>&nbsp;{options.suffix}</p>
+        </div>
       );
     }
   };
   render() {
     if (this.state.complete) {
       return (
-        <span>{this.options.complete}</span>
+        <div className='countdown-content'>
+          <div className='countdown-timer'>
+            <span className='timer-text'>{this.options.complete}</span>
+          </div>
+        </div>
       );
     } else {
       return (
-        <Countdown date={this.options.timestamp} renderer={this.renderer} />
+        <div className='countdown-content'>
+          <Countdown date={this.options.timestamp} renderer={this.renderer} />
+        </div>
       );
     };
   };

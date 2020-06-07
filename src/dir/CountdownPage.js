@@ -5,8 +5,7 @@ import CountdownTime from '../components/countdown/CountdownTime';
 class CountdownPage extends Component {
   render() {
     return (
-      <div>
-        <h1>Countdown</h1>
+      <div className='countdown-container'>
         <CountdownTime />
       </div>
     );

@@ -1,38 +1,27 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.countdown-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-start;
+}
+.countdown-content {
+  width: 1080px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 111px;
+  text-shadow: 8px 5px 10px rgba(0,0,0,1);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.timer-text {
+  font-family: 'Segoe UI Black', sans-serif;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.timer-count {
+  font-family: 'Impact', monospace;
+  width: 350px;
 }
