@@ -5,7 +5,12 @@ export const queryParse = (queryStr = '?') => {
     const queryArr = queryStr.slice(1).split('&');
     queryArr.forEach(q => {
       const key = q.split('=')[0].toLowerCase();
-      const value = q.split('=')[1].replace(spaceRegex, ' ');
+      let value;
+      if (q.split('=').length === 1) {
+        value = true;
+      } else {
+        value = q.split('=')[1].replace(spaceRegex, ' ');
+      };
       queryObj = { ...queryObj, [key]: value };
     });
   };

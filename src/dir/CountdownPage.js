@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 
-import { queryParse } from '../functions';
+import CountdownTime from '../components/countdown/CountdownTime';
 
 class CountdownPage extends Component {
-  constructor(props) {
-    super(props);
-    this.queries = queryParse(props.location.search);
-  };
   render() {
     return (
       <div>
         <h1>Countdown</h1>
+        <CountdownTime />
       </div>
     );
   };
