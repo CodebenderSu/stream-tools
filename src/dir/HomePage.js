@@ -8,7 +8,7 @@ class HomePage extends Component {
     return (
       <div>
         <h1>Stream Tools</h1>
-        <Link exact to={`${routes.countdown}?s=300`}>Countdown</Link>
+        <Link exact to={`${routes.countdown}`}>Countdown</Link>
       </div>
     );
   };
