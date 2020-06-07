@@ -6,7 +6,7 @@ import { baseRoute } from './config.js';
 class Root extends Component {
   render () {
     return (
-      <Router basename={baseRoute}>
+      <Router basename={process.env.PUBLIC_URL}>
         {this.props.children}
       </Router>
     );
