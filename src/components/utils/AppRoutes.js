@@ -10,7 +10,7 @@ class AppRoutes extends Component {
     return (
       <Switch>
         <Route path={routes.home} exact component={HomePage} />
-        <Route path={routes.countdown} component={CountdownPage} />
+        <Route path={routes.countdown} exact component={CountdownPage} />
       </Switch>
     );
   };

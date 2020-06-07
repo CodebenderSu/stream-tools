@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-
-import { baseRoute } from './config.js';
+import { HashRouter as Router } from 'react-router-dom';
 
 class Root extends Component {
   render () {
